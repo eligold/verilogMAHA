@@ -1,5 +1,5 @@
 
-public class parser {
+public class Parser {
 	
 	public static void parse(String l, String m)
 	{

@@ -16,7 +16,7 @@ public class FileRead {
 			Scanner scanner = new Scanner(file);
 			while (scanner.hasNextLine()) {
 				line = scanner.nextLine();
-				parser.readLine(line);
+				Parser.parse(line);
 			}
 			scanner.close();
 

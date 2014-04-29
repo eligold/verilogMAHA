@@ -1,8 +1,8 @@
 
 public class MAHA {
-	
+    static int PC; //Program Counter
 	public MAHA(){
-		static int PC = 0; //Program Counter
+		PC = 0;
 	}
 	
 	//Input: {Operation, Destination, Operand 1, Operand 2} or {"IF", operand 1, operand 2, condition, if outcome, else outcome}
@@ -52,7 +52,7 @@ public class MAHA {
 			
 			int branch = start + 2;
 			build.append("ADDI 100 " + input[1] + ", " + input[3] + ", R0/n"); //Branch must be preceeded by A-B to evaluate A condition B. Stored to destination as it will be overwritten last.
-			PC++
+			PC++;
 			
 			int end = start + 7;
 			build.append("BR 000, 100, " + end.toString() + "/n"); //Branch to end line if B >= 1, else continue
