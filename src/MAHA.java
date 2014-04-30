@@ -55,7 +55,7 @@ public class MAHA {
 			PC++;
 			
 			int end = start + 7;
-			build.append("BR 000, 100, " + end.toString() + "/n"); //Branch to end line if B >= 1, else continue
+			build.append("BR 000, 100, " + Integer.toString(end) + "/n"); //Branch to end line if B >= 1, else continue
 			PC++;
 			
 			build.append("ADD 100 R1, R1, "); //Total = Total + A
@@ -65,8 +65,8 @@ public class MAHA {
 			build.append("ADDI 100 " + input[3] + ",  " + input[3] ", 1/n"); //Decrement B
 			PC++;
 			
-			build.append("J " + branch.toString() + "/n"); //Jump back to line where branch is evaluated
-			PC++
+			build.append("J " + Integer.toString(branch) + "/n"); //Jump back to line where branch is evaluated
+			PC++;
 			
 			build.append("ADDI 000 "); //Dest = temp total
 			build.append(input[1] + ", "); 
