@@ -2,6 +2,7 @@
 public class Parser {
 
     private static parseVerilog parser = new parseVerilog();
+
     public static void parse(String l, String m)
     {
         parseVerilog p = new parseVerilog();
